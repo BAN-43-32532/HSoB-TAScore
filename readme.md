@@ -2,16 +2,24 @@
 
 ## 虚拟机
 
+虚拟机用于游戏状态保存和读取，即 SL。Windows 目前没有单进程存取的轻量化工具，推荐将游戏运行在 VMware Workstation pro 17.5 中的 Windows 虚拟机上，用它的快照功能记录游戏阶段状态，同时对游戏崩溃等潜在问题起到保险作用。快照的树状结构既实现了增量存储，也对 TAS 路线探索有一定帮助。
+
+单帧操作通过修改弹幕风脚本实现，无需（也无法）使用 [Hourglass](https://tasvideos.org/EmulatorResources/Hourglass) 或 [libTAS](https://tasvideos.org/EmulatorResources/LibTAS)。故大部分 Windows 系统理论上都可用于运行游戏的虚拟机。
+
+注：
+
+- Hourglass 运行在 Windows 32 位上，项目本身有诸多 bug，使用颇为不便，不过目前是大部分 Windows 游戏（包括东方正作和部分弹幕风游戏）的通用方案。本游戏和 Hourglass 不兼容。
+- libTAS 运行在 Linux 各发行版上，主要是 Ubuntu。可以通过 WSL2 / Linux 虚拟机 + [Wine](https://www.winehq.org/) + libTAS 的形式运行 Windows 游戏，但是配置极为繁琐。
+
 ### Windows 7 64位
 
-可在[Internet Archive](https://archive.org/)搜索相关.iso文件
+可在 [Internet Archive](https://archive.org/) 搜索相关 iso 文件。建议 "Windows 7 Ultimate SP1" 64bit 版本。32 位系统内存上限 4 GB，游戏本体可能卡顿；Windows XP 等较老的系统对现代图形 API 支持较差，不建议选择；Windows 8 以上系统额外消耗资源较多，不过也可选择。
 
 ### 补丁
-[KB4490628](https://www.catalog.update.microsoft.com/search.aspx?q=4490628)
 
-[KB4474419](https://www.catalog.update.microsoft.com/Search.aspx?q=4474419)
+Windows 7 对 SHA-2 证书支持不足，需要安装官方补丁 [KB4490628](https://www.catalog.update.microsoft.com/search.aspx?q=4490628) 和 [KB4474419](https://www.catalog.update.microsoft.com/Search.aspx?q=4474419) 后才能安装 VMware Tool。
 
-使用 [ImgBurn](https://www.imgburn.com/) 将补丁打包为.iso文件，在宿主机和虚拟机中传递。此方法也可用于其他文件的传递，不过安装VMWare Tool后有共享文件夹这一更加便捷的方案。
+使用 [ImgBurn](https://www.imgburn.com/) 将补丁打包为 iso 文件，在宿主机和虚拟机中传递。此方法也可用于其他文件的传递，不过安装 VMware Tool 后有共享文件夹这一更加便捷的方案。
 
 ## Mod
 

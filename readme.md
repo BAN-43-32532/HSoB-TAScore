@@ -1,5 +1,14 @@
 # HSoB TAScore
 
+## 虚拟机配置
+
+### 补丁
+[KB4490628](https://www.catalog.update.microsoft.com/search.aspx?q=4490628)
+
+[KB4474419](https://www.catalog.update.microsoft.com/Search.aspx?q=4474419)
+
+使用 [ImgBurn](https://www.imgburn.com/) 将补丁打包为.iso文件，在宿主机和虚拟机中传递。此方法也可用于其他文件的传递，不过安装VMWare Tool后有共享文件夹这一更加便捷的方案。
+
 ## Mod
 
 - [x] 单帧操作

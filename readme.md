@@ -1,6 +1,10 @@
 # HSoB TAScore
 
-## 虚拟机配置
+## 虚拟机
+
+### Windows 7 64位
+
+可在[Internet Archive](https://archive.org/)搜索相关.iso文件
 
 ### 补丁
 [KB4490628](https://www.catalog.update.microsoft.com/search.aspx?q=4490628)
